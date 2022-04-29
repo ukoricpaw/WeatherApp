@@ -1,0 +1,47 @@
+@import '../../../../styles/variables.scss';
+
+.firstimg{
+    position: relative;
+    width:160px;
+    right:70px;
+
+}
+
+.thisday{
+    padding:40px;
+    max-width: 850px;
+    width: 106%;
+    background: var(#{--components-background-default});
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+}
+.top_block{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px;
+    svg{
+        width: 120px;
+        height:120px;
+    }
+}
+
+.this_temp{
+    font-size: 96px;
+    font-weight: 500;
+    color: $primary-color;
+}
+
+.this_day_name {
+    font-size: 40px;
+    color: var(#{--text-color-default});
+}
+
+.bottom_block {
+    .this_time,
+    .this_city {
+        color: $base-color;
+        font-size: 25px;
+    }
+}

@@ -1,0 +1,43 @@
+@import '../../styles/variables.scss';
+
+.header{ 
+    display:flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom:30px;
+}
+
+.wrapper{
+    display:flex;
+    align-items: center;
+}
+
+.logo{
+    margin: right 20px;
+    swg{
+        width:65px;
+        height: 65px;
+    }
+}
+
+.title{
+    padding-left: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size:25px;
+    color: $primary-color;
+}
+
+.change_theme, .logo{
+    margin-right:20px;
+    cursor: pointer;
+
+}
+
+.change_theme {
+    display:flex;
+    font-size:20px;
+    font-family: 'Montserrat', sans-serif;
+    color: var(#{--text-color-default});
+}

@@ -1,0 +1,23 @@
+@import '~normalize.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,600&family=Radio+Canada:wght@500&display=swap');
+
+*,*:after,*:before {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Radio Canada', sans-serif;
+    position: relative;
+    background: var(#{--body-background-default});
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top:20px;
+}
