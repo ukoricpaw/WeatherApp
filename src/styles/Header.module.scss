@@ -1,0 +1,67 @@
+@import "Variables.module.scss";
+
+.searchField {
+  outline: none;
+  border: none;
+  width: 90%;
+  background-color: var(#{--currentday-default});
+  color: var(#{--searchField-default})
+}
+
+.searchIcon {
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+  object-fit: contain;
+}
+
+.searchContainer {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+}
+
+.searchFieldContainer {
+  width: 100%;
+  height: 30px;
+  background-color: var(#{--currentday-default});
+  display: flex;
+  align-items: center;
+  box-shadow: var(#{--currentday-shadow-default});
+  border-radius: 10px;
+  column-gap: 10px;
+}
+
+
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 40px;
+  align-items: center;
+}
+
+.changeThemeIcon {
+  cursor: pointer;
+}
+
+.searchDataContainer {
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(#{--currentday-default});
+  position: absolute;
+  top: 35px;
+  row-gap: 20px;
+  border-radius: 15px;
+}
+
+.searchItem {
+  cursor: pointer;
+  color: var(#{--searchField-default})
+}

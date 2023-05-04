@@ -1,0 +1,76 @@
+@import "Variables.module.scss";
+
+.homeWrapper {
+  display: flex;
+}
+
+.contentWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+
+  .rightSection {
+    margin: 30px;
+    display: column;
+    align-items: center;
+    width: 1000px;
+  }
+
+}
+
+
+.todayTitle {
+  font-size: 32px;
+  margin-top: 30px;
+  color: var(#{--titles-default});
+
+  .day {
+    margin-left: 40px;
+    font-weight: 500;
+    color: var(#{--otherValue-default});
+  }
+
+  .time {
+    margin-left: 10px;
+    font-weight: 400;
+    color: rgb(79, 150, 172);
+  }
+}
+
+.ownContent {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  column-gap: 30px;
+}
+
+@media screen and (max-width: 1250px) {
+  .rightSection {
+    margin: 30px;
+    display: column;
+    align-items: center;
+    width: 400px;
+  }
+
+  .homeWrapper {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .rightSection {
+    margin: 25px;
+    display: column;
+    align-items: center;
+    width: 400px;
+  }
+
+  .homeWrapper {
+    flex-direction: column;
+  }
+
+  .ownContent {
+    flex-direction: column;
+    row-gap: 30px;
+  }
+}

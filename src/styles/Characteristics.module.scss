@@ -1,0 +1,291 @@
+@import "Variables.module.scss";
+
+
+
+.secondContainer,
+.thirdContainer {
+  display: flex;
+}
+
+.characteristicsGrid {
+  display: grid;
+  grid-template-columns: 320px 320px;
+
+  animation: characteristicsAnim 0.4s ease-in-out;
+
+  @keyframes characteristicsAnim {
+    from {
+      transform: scale(0);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
+
+}
+
+
+
+
+
+// 
+@mixin card($border, $background) {
+  display: flex;
+  align-items: center;
+  background-color: $background;
+  height: 100px;
+  justify-content: center;
+  box-shadow: var(#{--container-default});
+  border-radius: $border;
+  column-gap: 20px;
+  cursor: pointer;
+}
+
+
+@mixin title($color) {
+  font-size: 18px;
+  color: $color;
+  font-weight: 400;
+}
+
+@mixin value($color, $color2, $size) {
+  font-size: $size;
+
+  color: $color2;
+
+  span {
+    font-size: 18px;
+    color: $color;
+  }
+}
+
+@mixin ImageContainerProperties($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+%ImageProperties {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.pressureCard {
+  @include card(20px 0px 0px 0px, var(#{--pressure-default}));
+
+
+
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .pressureTitle {
+      @include title(rgb(116, 131, 197));
+    }
+
+    .pressureValue {
+      @include value(rgb(119, 168, 233), var(#{--pressure-value-default}), 14px);
+    }
+  }
+
+  .rightSide {
+    @include ImageContainerProperties(60px, 50px);
+
+    .pressureIcon {
+      @extend %ImageProperties;
+    }
+
+  }
+
+}
+
+
+// Humidity
+
+.humidityCard {
+  @include card(0px 20px 0px 0px, var(#{--humidity-default}));
+
+  .leftSide {
+    @include ImageContainerProperties(60px, 50px);
+
+    .humidityIcon {
+      @extend %ImageProperties;
+    }
+
+  }
+
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .humidityTitle {
+      @include title(#f5f5f5)
+    }
+
+    .humidityValue {
+      @include value(rgb(212, 212, 212), #f5f5f5, 14px);
+    }
+  }
+}
+
+// windSpeed
+
+.windSpeedCard {
+  @include card(0px 0px 0px 0px, var(#{--windspeed-default}));
+
+  .leftSide {
+    @include ImageContainerProperties(60px, 50px);
+
+    .windSpeedIcon {
+      @extend %ImageProperties;
+    }
+
+  }
+
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .windSpeedTitle {
+      @include title(#f5f5f5)
+    }
+
+    .windSpeedValue {
+      @include value(rgb(250, 250, 250), var(#{--windspeed-value-default}), 24px);
+    }
+  }
+}
+
+// SunriseSunset
+
+.sunriseSunsetCard {
+  @include card(0px 0px 0px 0px, var(#{--sunrisesunset-default}));
+  flex-direction: column;
+
+  .sunriseSunsetTitle {
+    @include title(#e2e5e3)
+  }
+
+  .sunriseSunsetContent {
+    display: flex;
+    align-items: center;
+    column-gap: 25px;
+  }
+
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+
+    .sunriseWrapper,
+    .sunsetWrapper {
+      display: flex;
+      align-items: center;
+      width: 125px;
+      justify-content: space-between
+    }
+
+    .sunriseContainer {
+      @include ImageContainerProperties(50px, 40px);
+
+      .sunriseIcon {
+        @extend %ImageProperties;
+      }
+
+    }
+
+    .sunsetContainer {
+      @include ImageContainerProperties(50px, 40px);
+
+      .sunsetIcon {
+        @extend %ImageProperties;
+      }
+
+    }
+
+  }
+
+  .rightSide {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+
+    .sunriseValue {
+      @include value(rgb(250, 250, 250), #e7e7e7, 20px);
+    }
+
+    .sunsetValue {
+      @include value(rgb(250, 250, 250), #e7e7e7, 20px);
+    }
+  }
+
+}
+
+// Cloudiness
+
+.cloudinessCard {
+  @include card(0px 0px 0px 20px, var(#{--cloudiness-default}));
+
+  .rightSide {
+    @include ImageContainerProperties(60px, 50px);
+
+    .cloudinessIcon {
+      @extend %ImageProperties;
+    }
+
+  }
+
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .cloudinessTitle {
+      @include title(var(#{--otherValue-default}))
+    }
+
+    .cloudinessValue {
+      @include value(var(#{--pressure-value-default}), #2797d8, 24px);
+    }
+  }
+}
+
+// uvIndex
+
+.uvIndexCard {
+  @include card(0px 0px 20px 0px, var(#{--uvindex-default}));
+
+  .rightSide {
+    @include ImageContainerProperties(60px, 50px);
+
+    .uvIndexIcon {
+      @extend %ImageProperties;
+    }
+
+  }
+
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .uvIndexTitle {
+      @include title(#ffffff)
+    }
+
+    .uvIndexValue {
+      @include value(rgb(163, 163, 163), #2797d8, 24px);
+      text-align: center;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1250px) {
+  .characteristicsGrid {
+    grid-template-columns: 260px 260px;
+  }
+}

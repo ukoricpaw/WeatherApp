@@ -1,0 +1,150 @@
+// For background
+
+$background-color-light: #F6F6F6;
+$background-color-dark: #000000;
+
+// currentday, searchfield
+
+$currentday-light: white;
+$currentday-dark: #202020;
+$currentday-shadow-light: 1px 4px 4px rgba(0, 0, 0, 0.5);
+$currentday-shadow-dark: 0px 4px 4px rgba(255, 255, 255, 0.247);
+
+
+// searchField
+$searchField-light: #000;
+$searchField-dark: #fff;
+
+
+
+$container-light: 1px 4px 4px rgba(0, 0, 0, 0.5);
+$container-dark: 1px 4px 10px 1px rgba(252, 252, 252, 0.205);
+
+// pressureContainer
+
+$pressure-light: #C5EBE6;
+$pressure-dark: #323C46;
+
+
+$humidity-light: #678AE4;
+$humidity-dark: #404D6F;
+
+$windspeed-light: #51C0FF;
+$windspeed-dark: #293494;
+
+
+$sunrisesunset-light: #8EA2EA;
+$sunrisesunset-dark: #4B5166;
+
+$cloudiness-light: #EDEDED;
+$cloudiness-dark: #3B406C;
+
+$uvindex-light: #36417A;
+$uvindex-dark: #36417A;
+
+
+
+$titles-light: #000000;
+$titles-dark: #FFFFFF;
+
+
+$temp-light: #104d4d;
+$temp-dark: rgb(69, 192, 223);
+
+
+$windspeed-value-light: #2f24d4;
+
+$windspeed-value-dark: rgb(82, 192, 219);
+
+
+
+$pressure-value-light: #000000;
+
+$pressure-value-dark: rgb(137, 184, 196);
+
+
+$otherValue-light: #000000;
+
+$otherValue-dark: rgb(110, 197, 219);
+
+$redValue: red;
+
+
+
+:root {
+  --background-color-light: #{$background-color-light};
+  --background-color-dark: #{$background-color-dark};
+  --background-color-default: var(--background-color-light);
+
+  --currentday-light: #{$currentday-light};
+  --currentday-dark: #{$currentday-dark};
+  --currentday-default: var(--currentday-light);
+
+  --currentday-shadow-light: #{$currentday-shadow-light};
+  --currentday-shadow-dark: #{$currentday-shadow-dark};
+  --currentday-shadow-default: var(--currentday-shadow-light);
+
+  --searchField-light: #{$searchField-light};
+  --searchField-dark: #{$searchField-dark};
+  --searchField-default: var(--searchField-light);
+
+  // pressure
+  --pressure-light: #{$pressure-light};
+  --pressure-dark: #{$pressure-dark};
+  --pressure-default: var(--pressure-light);
+
+  --container-light: #{$container-light};
+  --container-dark: #{$container-dark};
+  --container-default: var(--container-light);
+
+  // humidity
+
+  --humidity-light: #{$humidity-light};
+  --humidity-dark: #{$humidity-dark};
+  --humidity-default: var(--humidity-light);
+  // windspeed
+
+  --windspeed-light: #{$windspeed-light};
+  --windspeed-dark: #{$windspeed-dark};
+  --windspeed-default: var(--windspeed-light);
+  // sunrisesunset
+
+  --sunrisesunset-light: #{$sunrisesunset-light};
+  --sunrisesunset-dark: #{$sunrisesunset-dark};
+  --sunrisesunset-default: var(--sunrisesunset-light);
+  // cloudiness
+
+  --cloudiness-light: #{$cloudiness-light};
+  --cloudiness-dark: #{$cloudiness-dark};
+  --cloudiness-default: var(--cloudiness-light);
+  // uvindex
+
+  --uvindex-light: #{$uvindex-light};
+  --uvindex-dark: #{$uvindex-dark};
+  --uvindex-default: var(--uvindex-light);
+  // titles
+
+  --titles-light: #{$titles-light};
+  --titles-dark: #{$titles-dark};
+  --titles-default: var(--titles-light);
+  // temp
+
+  --temp-light: #{$temp-light};
+  --temp-dark: #{$temp-dark};
+  --temp-default: var(--temp-light);
+  // windspeedvalue
+  --windspeed-value-light: #{$windspeed-value-light};
+  --windspeed-value-dark: #{$windspeed-value-dark};
+  --windspeed-value-default: var(--windspeed-value-light);
+
+
+  // pressurevalue
+  --pressure-value-light: #{$pressure-value-light};
+  --pressure-value-dark: #{$pressure-value-dark};
+  --pressure-value-default: var(--pressure-value-light);
+
+  --otherValue-light: #{$otherValue-light};
+  --otherValue-dark: #{$otherValue-dark};
+  --otherValue-default: var(--otherValue-light);
+
+}
